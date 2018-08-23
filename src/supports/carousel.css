@@ -1,0 +1,58 @@
+.carousel {
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 90px;
+    left: 10%;
+}
+
+.carousel, ul {
+    height: 500px;
+}
+
+.carousel li {
+    display: inline-block;
+    height: 500px;
+    float: left;
+    position: relative;
+    width: 1200px;
+    margin-right: 200px;
+}
+
+.carousel ul {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 9000px;
+    list-style: none;
+    margin-left: -50px;
+    transition: left .4s linear;
+
+    animation: slide-animation 15s both infinite;
+}
+
+.carousel ul:hover {
+    animation-play-state: paused;
+}
+
+.carousel-container {
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+}
+
+.carousel-container img {
+    width: 100%;
+    padding: 0 10px;
+}
+
+
+@keyframes slide-animation {
+    30% {left: 0}
+    35% {left: -1400px}
+    65% {left: -1400px}
+    70% {left: -2800px}
+    95% {left: -2800px}
+    100% {left: 0}
+}
