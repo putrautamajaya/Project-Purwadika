@@ -1,0 +1,47 @@
+.newArrival {
+    position: absolute; 
+    width: 100%; 
+    padding-left: 50px; 
+    padding-right: 50px;
+}
+
+.newArrivalGridDisplay {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 410px 410px;
+    grid-gap: 20px;
+}
+
+.newArrivalBox {
+    background-color:white; 
+    box-shadow: 5px 5px 5px #888888;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.imageBox {
+    height: 300px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto; overflow: hidden;
+}
+
+.imageBoxBG {
+    width: 100%;
+}
+
+p {
+    padding-left: 10px;
+}
+
+.line {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.newArrivalText {
+    padding-bottom: 0px;
+    text-align: left;
+}

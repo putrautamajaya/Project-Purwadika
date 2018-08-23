@@ -3,6 +3,7 @@ import "../supports/Header.css";
 import burung from "../images/burung.gif";
 import cart from "../images/cart.png";
 import arrowDown from "../images/arrowDown.png";
+import { Link } from 'react-router-dom';
 
 
 class Header extends Component {
@@ -11,7 +12,9 @@ class Header extends Component {
         return (
     
         <div className="headerProjek">
-            <a href="#"><h1 className="logo">GENTLEMEN.</h1></a>
+            <Link to="/">
+                <h1 className="logo">GENTLEMEN.</h1>
+            </Link>
               
             <img className="burung1" src= {burung}/>
             <img className="burung2" src= {burung}/>
