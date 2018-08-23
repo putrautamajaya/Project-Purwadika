@@ -25,8 +25,10 @@ class Header extends Component {
             <div className="searchButton">
                 <a href="#"><i className="fa fa-search searchColor"></i></a>
             </div>
-
-            <a href="#"><div className="login">Login</div></a>
+            
+            <Link to="/loginpage">
+                <div className="login">Login</div>
+            </Link>
             <a href="#"><div className="daftar">Daftar</div></a>
 
             <a href="#"><img className="cart" src={cart}/></a>

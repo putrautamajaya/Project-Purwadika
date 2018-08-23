@@ -4,6 +4,7 @@ import Header from './components/Header';
 
 import { Route } from 'react-router-dom';
 import HomePage from './components/homePage';
+import LoginPage from './components/loginPage';
 
 class App extends Component {
   render() {
@@ -14,8 +15,8 @@ class App extends Component {
 
         <div>
         <Route exact path="/" component={ HomePage }/>
-        {/* <Route path="/albumlist" component={ AlbumList }/>
-        <Route path="/movielist" component={ MovieList }/> */}
+        <Route path="/loginpage" component={ LoginPage }/>
+        {/* <Route path="/movielist" component={ MovieList }/> */}
         </div>
         
         <Header />
