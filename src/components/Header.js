@@ -29,7 +29,10 @@ class Header extends Component {
             <Link to="/loginpage">
                 <div className="login">Login</div>
             </Link>
-            <a href="#"><div className="daftar">Daftar</div></a>
+            <Link to="/registerpage">
+                <div className="daftar">Register</div>
+            </Link>
+            
 
             <a href="#"><img className="cart" src={cart}/></a>
 
