@@ -1,5 +1,10 @@
-const INITIAL_STATE = [{ username: "Putra", email: "putra@gmail.com", password: "123456"}]
+const INITIAl_STATE = { username: "", email: ""};
 
-export default ( state=INITIAL_STATE, action) => {
-    return state;
+export default (state = INITIAl_STATE, action) => {
+    switch(action.type) {
+        case "User berhasil login" :
+            return action.payload;
+        default:
+            return state;
+    } 
 }

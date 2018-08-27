@@ -94,6 +94,16 @@ h1 {
 .login:hover {
     color: white;
 }
+.loggedIn {
+    color: white;
+    font-size: 20px;
+    
+    position: fixed;
+    left: 1120px;
+    top: 25px;
+
+    transition: 1s;
+}
 
 .daftar {
     color: white;
@@ -263,3 +273,4 @@ h1 {
     margin-top: 90px;
     left: 100px;
 }
+
