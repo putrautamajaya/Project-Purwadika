@@ -22,7 +22,7 @@ export const onLogin = (user) => {
         }).catch( err => {
             console.log(err);
             dispatch ({
-                type: "USER_LOGIN_FAIL "
+                type: "USER_LOGIN_FAIL"
             });
             
         })
@@ -31,13 +31,7 @@ export const onLogin = (user) => {
 };
 
 export const onLogOut = (user) => {
-    return (
-        {
-            type: "log Out Berhasil",
-            payload:{
-                username: "",
-                email: ""
-            } 
-        }
-    )
-};
+    return {
+        type: "log_Out",
+    };
+}

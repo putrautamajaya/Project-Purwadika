@@ -9,15 +9,21 @@ import { onLogOut } from '../actionCreator';
 
 
 class Header extends Component {
+    state = {
+        logout: 0
+    }
 
     onLogOutClick = () => {
         this.props.onLogOut();
+        this.setState({logout: this.state.logout += 1});
     }
 
-    render() {
-        if (this.props.usersData.username != "") {
+    renderNavbar = () => {
+        console.log(this.props.usersData);
+
+        if (this.props.usersData.username != "" && this.state.logout==0) {
             return (
-    
+
                 <div className="headerProjek">
                     <Link to="/">
                         <h1 className="logo">GENTLEMEN.</h1>
@@ -37,11 +43,8 @@ class Header extends Component {
                         <div className="loggedIn">Hello, {this.props.usersData.username}</div>
                     </Link>
                     
-                    <input type="button" className="daftar" 
-                        onClick={this.onLogOutClick} value="Log Out"/>
-                    
-                    
-        
+                    <input type="button" className="daftar btn btn-warning" onClick={this.onLogOutClick} value="Log Out"/>
+
                     <a href="#"><img className="cart" src={cart}/></a>
         
                     <div className="navBarHide">
@@ -128,7 +131,14 @@ class Header extends Component {
         </div>
         );
     }
+    render() {
+        return (
+            this.renderNavbar()
+        );
+    }
 }
+
+
 
 const mapStateToProps = (state) => {
     const userLogin = state.users;
@@ -136,4 +146,4 @@ const mapStateToProps = (state) => {
     return { usersData: userLogin};
 }
 
-export default connect(mapStateToProps, { onLogOut })(Header);
+export default connect( mapStateToProps, { onLogOut })(Header);
